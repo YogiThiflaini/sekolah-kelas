@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS</title>
+</head>
+<body>
+    <div>
+        <h1>Hallo Sidoarjo</h1>
+        <button onclick="hallo()">
+            klik
+        </button>
+
+        <h1 id="nama">Nama Saya</h1>
+        <input type="text" id="namasaya">
+        <button onclick="nama()">
+            nama
+        </button>
+
+        <h1 id="hasil">Hasil</h1>
+        <input type="number" id="bil1">
+        <input type="number" id="bil2">
+        <button onclick="tambah()">
+            tambah
+        </button>
+    </div>
+
+    <script>
+        function hallo(){
+            alert ("Hallo Javacript")
+        }
+        function nama(){
+            let nama=document.getElementById('namasaya').value;
+            document.getElementById('nama').innerHTML="Nama Saya "+nama;
+        }
+        function tambah() {
+            let a= parseInt(document.getElementById('bil1').value);
+            let b= parseInt(document.getElementById('bil2').value);
+            let hasil = a+b;
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+    </script>
+</body>
+</html>
